@@ -1,0 +1,71 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Buttons
+%btn-shared {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #fff;
+    background: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: #444;
+    background: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #fff;
+    background: $dark-color;
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background: $main-color;
+}
+.bg {
+  &-main {
+    background: $main-color;
+    color: #fff;
+  }
+  &-dark {
+    background: $dark-color;
+    color: #fff;
+  }
+  &-light {
+    background: $light-color;
+    color: #444;
+  }
+}
+.lead {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.section-title {
+  font-size: 2.5rem;
+}
+.bottom-line {
+  background: $main-color;
+  display: inline-block;
+  width: 4rem;
+  height: 3px;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem;
+}
